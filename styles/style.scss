@@ -5,7 +5,13 @@
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-// my style
+// my styles
+$light-grey-blue : hsl(210, 46%, 95%);
+$dark-grey-blue: hsl(217, 19%, 35%);
+$blackish-blue: hsl(219, 29%, 14%);
+$kinda-violet: hsl(263, 55%, 52%);
+$white: hsl(0, 0%, 100%);
+
 body{
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-size: 13px;
@@ -14,6 +20,7 @@ body{
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: $light-grey-blue;
 }
 
 .container-grid{
@@ -22,19 +29,35 @@ body{
   gap: 30px;
 }
 .review-block{
-  border: red solid 1px;
   border-radius: 10px;
   padding: 30px;
 }
 .review-one{
-  grid-column: 1/span 2
+  grid-column: 1/span 2;
+  background-color: $kinda-violet;
+}
+.review-two{
+  background-color: $dark-grey-blue;
+}
+.review-three{
+  background-color: $white;
 }
 .review-four{
   grid-column: 2/span 2;
+  background-color: $blackish-blue;
 }
 .review-five{
   grid-column: 4;
   grid-row: 1/span 2;
+  background-color: $white;
 }
 
+img{
+  border-radius: 45px;
+  border: $light-grey-blue solid 2px;
+  padding: 3px;
+}
 
+h1{
+  font-size: 18px;
+}
