@@ -1,0 +1,40 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+// my style
+body{
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container-grid{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+}
+.review-block{
+  border: red solid 1px;
+  border-radius: 10px;
+  padding: 30px;
+}
+.review-one{
+  grid-column: 1/span 2
+}
+.review-four{
+  grid-column: 2/span 2;
+}
+.review-five{
+  grid-column: 4;
+  grid-row: 1/span 2;
+}
+
+
