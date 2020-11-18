@@ -26,6 +26,19 @@ body {
   background-color: #ecf2f8;
 }
 
+@media (max-width: 1275px) {
+  body {
+    height: auto;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  body {
+    padding: 15px;
+  }
+}
+
 .container-grid {
   display: -ms-grid;
   display: grid;
@@ -34,9 +47,30 @@ body {
   gap: 30px;
   width: 80%;
   margin-bottom: 30px;
+  height: auto;
 }
 
-.review-block {
+@media (max-width: 1275px) {
+  .container-grid {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 775px) {
+  .container-grid {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .container-grid {
+    width: 100%;
+  }
+}
+
+.container-grid .review-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,7 +86,7 @@ body {
   height: 260px;
 }
 
-.review-block header {
+.container-grid .review-block header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,14 +95,14 @@ body {
           align-items: flex-start;
 }
 
-.review-block header img {
+.container-grid .review-block header img {
   border-radius: 45px;
   border: #ecf2f8 solid 2px;
   padding: 3px;
   width: 30px;
 }
 
-.review-block header .name-title-section {
+.container-grid .review-block header .name-title-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,13 +116,14 @@ body {
   margin: 0 15px 15px 15px;
   font-size: 15px;
   height: 45px;
+  z-index: 2;
 }
 
-.review-block header .name-title-section h2 {
+.container-grid .review-block header .name-title-section h2 {
   opacity: .5;
 }
 
-.review-block h3 {
+.container-grid .review-block h3 {
   font-size: 20px;
   font-weight: 600;
   letter-spacing: .4px;
@@ -96,7 +131,7 @@ body {
   z-index: 2;
 }
 
-.review-block p {
+.container-grid .review-block p {
   opacity: .7;
   font-size: 13px;
   letter-spacing: .4px;
@@ -104,7 +139,21 @@ body {
   margin-top: 15px;
 }
 
-.review-block.review-one {
+@media (max-width: 900px) {
+  .container-grid .review-block {
+    height: 325px;
+  }
+}
+
+@media (max-width: 775px) {
+  .container-grid .review-block {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+.container-grid .review-block.review-one {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1/span 2;
@@ -113,25 +162,39 @@ body {
   position: relative;
 }
 
-.review-block.review-one .big-quote {
+@media (max-width: 775px) {
+  .container-grid .review-block.review-one {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+}
+
+.container-grid .review-block.review-one .big-quote {
   position: absolute;
   right: 18%;
   top: 0;
   z-index: 1;
-  height: 120px;
+  width: 120px;
 }
 
-.review-block.review-two {
+@media (max-width: 575px) {
+  .container-grid .review-block.review-one .big-quote {
+    right: 15px;
+    height: 120px;
+  }
+}
+
+.container-grid .review-block.review-two {
   background-color: #48556a;
   color: white;
 }
 
-.review-block.review-three {
+.container-grid .review-block.review-three {
   background-color: white;
   color: #19212e;
 }
 
-.review-block.review-four {
+.container-grid .review-block.review-four {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-column: 2/span 2;
@@ -139,7 +202,14 @@ body {
   color: white;
 }
 
-.review-block.review-five {
+@media (max-width: 775px) {
+  .container-grid .review-block.review-four {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+}
+
+.container-grid .review-block.review-five {
   -ms-grid-column: 4;
   grid-column: 4;
   -ms-grid-row: 1;
@@ -150,5 +220,24 @@ body {
           box-sizing: border-box;
   background-color: white;
   color: #19212e;
+}
+
+@media (max-width: 1275px) {
+  .container-grid .review-block.review-five {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/span 3;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+}
+
+@media (max-width: 775px) {
+  .container-grid .review-block.review-five {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 5;
+    grid-row: 5;
+  }
 }
 /*# sourceMappingURL=style.css.map */

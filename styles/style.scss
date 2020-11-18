@@ -21,6 +21,7 @@ $white: hsl(0, 0%, 100%);
       border: $light-grey-blue solid 2px;
       padding: 3px;
       width: 30px;
+
     }
     & .name-title-section{
       display: flex;
@@ -29,6 +30,7 @@ $white: hsl(0, 0%, 100%);
       margin: 0 15px 15px 15px;
       font-size: 15px;
       height: 45px;
+      z-index: 2;
 
       & h2{
         opacity: .5; 
@@ -60,6 +62,13 @@ body{
   justify-content: center;
   height: 100vh;
   background-color: $light-grey-blue;
+  @media (max-width: 1275px){
+    height: auto;
+    padding: 30px;
+  }
+  @media (max-width: 575px){
+    padding: 15px
+  }
 }
 
 .container-grid{
@@ -68,52 +77,90 @@ body{
   gap: 30px;
   width: 80%;
   margin-bottom: 30px;
-}
+  height: auto;
 
-.review-block{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  border-radius: 10px;
-  padding: 30px;
-  height: 260px;
-  @include reviewBlock();
-
-  &.review-one{
-    grid-column: 1/span 2;
-    background-color: $kinda-violet;
-    color: $white;
-    position: relative;
-    & .big-quote{
-      position: absolute;
-      right: 18%;
-      top: 0;
-      z-index: 1;
-      height: 120px; 
+  @media (max-width: 1275px){
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 775px){
+    grid-template-columns: 100%;
+  }
+  @media (max-width: 575px){
+    width: 100%;
+  }
+  & .review-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+    padding: 30px;
+    height: 260px;
+    @include reviewBlock();
+    @media (max-width: 900px){
+      height: 325px
     }
+    @media (max-width: 775px){
+      height: fit-content
+    }
+
+    &.review-one{
+      grid-column: 1/span 2;
+      background-color: $kinda-violet;
+      color: $white;
+      position: relative;
+
+      @media (max-width: 775px){
+        grid-column: 1;
+      }
+      & .big-quote{
+        position: absolute;
+        right: 18%;
+        top: 0;
+        z-index: 1;
+        width: 120px; 
+        @media (max-width: 575px){
+          right: 15px;
+          height: 120px
+        }
+      }
+
+    }
+    &.review-two{
+      background-color: $dark-grey-blue;
+      color: $white;  
+    }
+    &.review-three{
+      background-color: $white;
+      color: $blackish-blue;
+    }
+    &.review-four{
+      grid-column: 2/span 2;
+      background-color: $blackish-blue;
+      color: $white;
+      @media (max-width: 775px){
+        grid-column: 1;
+      }
+    }
+    &.review-five{
+      grid-column: 4;
+      grid-row: 1/span 2;
+      height: 100%;
+      box-sizing: border-box;
+      background-color: $white;
+      color: $blackish-blue;
+      @media (max-width: 1275px){
+        grid-column: 1/span 3;
+        grid-row: 3;
+      }
+      @media (max-width: 775px){
+        grid-column: 1;
+        grid-row: 5
+      }
+    }
+    
   }
-  &.review-two{
-    background-color: $dark-grey-blue;
-    color: $white;  
-  }
-  &.review-three{
-    background-color: $white;
-    color: $blackish-blue;
-  }
-  &.review-four{
-    grid-column: 2/span 2;
-    background-color: $blackish-blue;
-    color: $white;
-  }
-  &.review-five{
-    grid-column: 4;
-    grid-row: 1/span 2;
-    height: 100%;
-    box-sizing: border-box;
-    background-color: $white;
-    color: $blackish-blue;
-  }
-  
 }
+
+
 
 
