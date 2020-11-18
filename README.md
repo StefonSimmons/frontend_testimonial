@@ -1,6 +1,6 @@
 # Frontend Testimonial
 ## About
-A solution to a [Frontend Mentor](https://www.frontendmentor.io/) challenge. Improve CSS Grid and SASS skills. 
+A solution to a [Frontend Mentor](https://www.frontendmentor.io/) challenge. Implements a responsive CSS Grid-based layout design w/ SASS. 
 
 
 ## Tech
