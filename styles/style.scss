@@ -27,17 +27,42 @@ body{
   display: grid;
   grid-template-columns: repeat(4,1fr);
   gap: 30px;
+  margin: 0 60px;
 }
 .review-block{
+  // border: red solid 1px;
   border-radius: 10px;
   padding: 30px;
+  height: 250px;
 }
 .review-one{
   grid-column: 1/span 2;
   background-color: $kinda-violet;
+  color: $white;
+  & h2{
+    opacity: .5; 
+  }
+  & h3{
+    font-size: 23px;
+    letter-spacing: 1.5px;
+  }
+  & p{
+    opacity: .7;
+  }
 }
 .review-two{
   background-color: $dark-grey-blue;
+  color: $white;
+  & h2{
+    opacity: .5; 
+  }
+  & h3{
+    font-size: 23px;
+    letter-spacing: 1.5px;
+  }
+  & p{
+    opacity: .7;
+  }
 }
 .review-three{
   background-color: $white;
@@ -45,10 +70,23 @@ body{
 .review-four{
   grid-column: 2/span 2;
   background-color: $blackish-blue;
+  color: $white;
+  & h2{
+    opacity: .5; 
+  }
+  & h3{
+    font-size: 23px;
+    letter-spacing: 1.5px;
+  }
+  & p{
+    opacity: .7;
+  }
 }
 .review-five{
   grid-column: 4;
   grid-row: 1/span 2;
+  height: 100%;
+  box-sizing: border-box;
   background-color: $white;
 }
 
@@ -56,6 +94,10 @@ img{
   border-radius: 45px;
   border: $light-grey-blue solid 2px;
   padding: 3px;
+}
+header{
+  display: flex;
+  align-items: center;
 }
 
 h1{
