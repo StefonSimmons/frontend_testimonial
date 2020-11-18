@@ -104,7 +104,7 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin: 0 15px 15px 15px;
+  margin: 0 15px;
   font-size: 15px;
   height: 45px;
   z-index: 2;
@@ -115,6 +115,7 @@ body {
 }
 
 .container-grid .review-block h3 {
+  margin-top: 15px;
   font-size: 20px;
   font-weight: 600;
   letter-spacing: .4px;
