@@ -13,22 +13,45 @@ $kinda-violet: hsl(263, 55%, 52%);
 $white: hsl(0, 0%, 100%);
 
 @mixin reviewBlock() {
-  & h2{
-    opacity: .5; 
+  & header{
+    display: flex;
+    align-items: flex-start;
+    & img{
+      border-radius: 45px;
+      border: $light-grey-blue solid 2px;
+      padding: 3px;
+      width: 30px;
+    }
+    & .name-title-section{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin: 0 15px 15px 15px;
+      font-size: 15px;
+      height: 45px;
+
+      & h2{
+        opacity: .5; 
+      }
+    }
   }
+
   & h3{
     font-size: 20px;
     font-weight: 600;
     letter-spacing: .4px;
     line-height: 1.2;
+    z-index: 2;
   }
   & p{
     opacity: .7;
     font-size: 13px;
     letter-spacing: .4px;
     line-height: 1.5;
+    margin-top: 15px
   }
 }
+
 body{
   font-family: 'Barlow Semi Condensed', sans-serif;
   display: flex;
@@ -46,66 +69,51 @@ body{
   width: 80%;
   margin-bottom: 30px;
 }
+
 .review-block{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   border-radius: 10px;
   padding: 30px;
-  height: 275px;
-}
-.review-one{
-  grid-column: 1/span 2;
-  background-color: $kinda-violet;
-  color: $white;
+  height: 260px;
   @include reviewBlock();
 
-}
-.review-two{
-  background-color: $dark-grey-blue;
-  color: $white;
-  @include reviewBlock();
-
-}
-.review-three{
-  background-color: $white;
-  color: $blackish-blue;
-  @include reviewBlock();
-}
-.review-four{
-  grid-column: 2/span 2;
-  background-color: $blackish-blue;
-  color: $white;
-  @include reviewBlock();
-}
-.review-five{
-  grid-column: 4;
-  grid-row: 1/span 2;
-  height: 100%;
-  box-sizing: border-box;
-  background-color: $white;
-  color: $blackish-blue;
-  @include reviewBlock();
-}
-
-header{
-  display: flex;
-  align-items: center;
-}
-
-img{
-  border-radius: 45px;
-  border: $light-grey-blue solid 2px;
-  padding: 3px;
-  width: 30px;
+  &.review-one{
+    grid-column: 1/span 2;
+    background-color: $kinda-violet;
+    color: $white;
+    position: relative;
+    & .big-quote{
+      position: absolute;
+      right: 18%;
+      top: 0;
+      z-index: 1;
+      height: 120px; 
+    }
+  }
+  &.review-two{
+    background-color: $dark-grey-blue;
+    color: $white;  
+  }
+  &.review-three{
+    background-color: $white;
+    color: $blackish-blue;
+  }
+  &.review-four{
+    grid-column: 2/span 2;
+    background-color: $blackish-blue;
+    color: $white;
+  }
+  &.review-five{
+    grid-column: 4;
+    grid-row: 1/span 2;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: $white;
+    color: $blackish-blue;
+  }
+  
 }
 
-.name-title-section{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin: 15px;
-  font-size: 15px;
-  height: 45px;
-}
 
