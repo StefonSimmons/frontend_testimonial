@@ -1,58 +1,5 @@
-.attribution {
-  font-size: 14px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-// my styles
-$light-grey-blue : hsl(210, 46%, 95%);
-$dark-grey-blue: hsl(217, 19%, 35%);
-$blackish-blue: hsl(219, 29%, 14%);
-$kinda-violet: hsl(263, 55%, 52%);
-$white: hsl(0, 0%, 100%);
-
-@mixin reviewBlock() {
-  & header{
-    display: flex;
-    align-items: flex-start;
-    & img{
-      border-radius: 45px;
-      border: $light-grey-blue solid 2px;
-      padding: 3px;
-      width: 30px;
-
-    }
-    & .name-title-section{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      margin: 0 15px 15px 15px;
-      font-size: 15px;
-      height: 45px;
-      z-index: 2;
-
-      & h2{
-        opacity: .5; 
-      }
-    }
-  }
-
-  & h3{
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: .4px;
-    line-height: 1.2;
-    z-index: 2;
-  }
-  & p{
-    opacity: .7;
-    font-size: 13px;
-    letter-spacing: .4px;
-    line-height: 1.5;
-    margin-top: 15px
-  }
-}
+@import './variables';
+@import './mixins';
 
 body{
   font-family: 'Barlow Semi Condensed', sans-serif;
@@ -88,6 +35,7 @@ body{
   @media (max-width: 575px){
     width: 100%;
   }
+  
   & .review-block{
     display: flex;
     flex-direction: column;
@@ -160,7 +108,13 @@ body{
     
   }
 }
-
+.attribution {
+  font-size: 14px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
 
 
